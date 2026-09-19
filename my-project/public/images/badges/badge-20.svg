@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="grad20" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#311B92" />
+      <stop offset="100%" stop-color="#673AB7" />
+    </linearGradient>
+    <radialGradient id="ring20" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.25" />
+    </radialGradient>
+    <filter id="shadow20" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#311B92" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  
+  <!-- Outer Octagon Badge Body -->
+  <g filter="url(#shadow20)">
+    <path d="M 80 14 L 126 34 L 146 80 L 126 126 L 80 146 L 34 126 L 14 80 L 34 34 Z" 
+          fill="url(#grad20)" 
+          stroke="#FAF7F4" 
+          stroke-width="3.5" 
+          stroke-linejoin="round"/>
+    <path d="M 80 14 L 126 34 L 146 80 L 126 126 L 80 146 L 34 126 L 14 80 L 34 34 Z" 
+          fill="url(#ring20)"/>
+  </g>
+
+  <!-- Inner Circle Frame -->
+  <circle cx="80" cy="80" r="46" fill="#1A1714" stroke="#FAF7F4" stroke-width="2.5" opacity="0.92" />
+  <circle cx="80" cy="80" r="41" fill="none" stroke="#673AB7" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.8" />
+
+  <!-- Center Symbol Icon (24x24 viewBox mapped to center) -->
+  <g transform="translate(62, 62) scale(1.5)" color="#673AB7">
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+</svg>
