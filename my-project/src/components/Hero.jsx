@@ -76,8 +76,8 @@ export default function Hero() {
           </motion.div>
 
           <motion.h1 className="hero-name" variants={itemVariants}>
-            <span className="name-first">GOKULAKRISHNAN</span>
-            <span className="name-last">M</span>
+            <span className="name-first">{profile.firstName.toUpperCase()}</span>
+            <span className="name-last">{profile.lastName.toUpperCase()}</span>
           </motion.h1>
 
           <motion.p className="hero-tagline" variants={itemVariants}>
@@ -143,10 +143,15 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      <div className="hero-scroll-indicator" aria-hidden="true">
-        <div className="hero-scroll-line" />
+      <a
+        href="#about"
+        className="hero-scroll-indicator"
+        onClick={(e) => handleScrollTo(e, '#about')}
+        aria-label="Scroll down to About section"
+      >
         <span>Scroll Down</span>
-      </div>
+        <div className="hero-scroll-line" />
+      </a>
     </section>
   );
 }
